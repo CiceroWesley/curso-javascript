@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+</head>
+<body>
+    <h1>Conversor de temperatura</h1>
+    <button onclick="converter()">Converter</button>
+    <p id='sec1'>Clique no botão acima para iniciar</p>
+
+    <script>
+        function converter(){
+            var celsius1 = Number(prompt('Digte uma temperatura em °Celsius:'))
+            document.getElementById('sec1').innerHTML = `<p><h2>A temperatura de ${celsius1.toFixed(1).replace(".",",")}° Celsius, corresponde a...</h2></p><p>${(celsius1 +273.15).toFixed(2).replace(".",",")}K (Kelvin)</p><p>${((celsius1*9/5)+32).toFixed(2).replace(".",",")}°F Fahrenheit</p>`
+        }
+    </script>
+</body>
+</html>

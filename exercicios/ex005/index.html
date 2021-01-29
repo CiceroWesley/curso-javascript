@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiros passos com dom</title>
+    <style>
+        body {
+            background-color: rgb(78, 194, 194);
+            color: blanchedalmond;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando com DOM</h1>
+    <p>Aqui vai o <strong>resultado</strong></p>
+    <p>Outro parágrafo</p>
+    <!--<div name="msg">Clique em min</div> 
+    ou class = "msg"-->
+    <div id="msg">Clique em min</div>
+    <script>
+        //var corpo = windows.document.body
+        var p1 = window.document.getElementsByTagName("p")[0] //no plura
+        //var d  = window.document.getElementsByName("msg")[0]
+        var d = window.document.querySelector("div#msg") // se for classe é div.msg
+        //var d  = window.document.getElementById("msg")
+        //var d1  = window.document.getElementsByClassName("msg")
+        document.write(p1.innerText) //sem os filhos
+        document.write(p1.innerHTML) //com os filhos/tags de dentro
+        d.style.background = "white"
+        p1.style.color = "blue"
+        p1.style.backgroundColor = "red"
+    </script>
+</body>
+</html>
