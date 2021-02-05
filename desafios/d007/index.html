@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> US$</title>
+</head>
+<body>
+    <script>
+        var dolar = prompt('Antes de mais nada. Quanto está a cotação do dólar agora?')
+    </script>
+    <h1>Conversor de R$ para US$</h1>
+    <button onclick="converter()">Converter</button>
+    <p id="conv">Clique no botão acima para iniciar.</p>
+    <script>
+        function converter(){
+            var real = prompt('Quantos R$ você tem na carteira?')
+            document.querySelector("p#conv").innerHTML = `Com ${real} R$ você pode comprar ${(real/dolar).toFixed(2)} US$.`
+        }
+    </script>
+</body>
+</html>

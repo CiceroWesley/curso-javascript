@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Desconto</title>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <button onclick="desconto()">Desconto de 10%</button>
+    <p id="p1">Clique no botão acima para iniciar</p>
+    <script>
+        var produto = prompt('Qual é o produto que você está comprando?')
+        var preco = Number(prompt(`Qual é o preço de ${produto}?`))
+        var texto = document.getElementById('p1')
+        texto.innerHTML =`<h1>Calculado desconto de 10% para ${produto} </h1>`
+        texto.innerHTML+= `<p>O preço original era R$ ${preco}</p>`  
+        texto.innerHTML+= `<p>Você acaba de ganhar R$ ${(0.1*preco).toFixed(2)} de desconto (-10%)</p>`
+        texto.innerHTML+= `<p>No fim, você vai pagar ${(preco - (0.1*preco)).toFixed(2)} no produto ${produto}.</p>` 
+
+    </script>
+</body>
+</html>

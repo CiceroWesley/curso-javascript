@@ -1,6 +1,6 @@
 var agora = new Date()
 
-var hora = agora.getHours()
+var hora =  agora.getHours()
 console.log(`Hora: ${hora}`)
 
 if(hora > 6 && hora < 12){
